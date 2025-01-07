@@ -18,7 +18,8 @@ def int_to_roman(num):
         60: "LX",
         70: "LXX",
         80: "LXXX",
-        90: "XC"
+        90: "XC",
+        100: "C"
     }
     result = ""
     for value in sorted(roman_numerals.keys(), reverse=True):
@@ -26,7 +27,6 @@ def int_to_roman(num):
             result += roman_numerals[value]
             num -= value
     return result
-
 
 num = int(input("Enter a number between 1 and 100: "))
 print(int_to_roman(num))
